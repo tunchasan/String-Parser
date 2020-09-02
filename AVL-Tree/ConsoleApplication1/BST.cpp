@@ -60,7 +60,7 @@ void BST::processUserData(string data)
 	newUser = newUser->createUser(userName, userAge, userWeight);
 
 	// Insert to BST
-	insertNodeToBST(root, newUser);
+	root = insertNodeToBST(root, newUser);
 }
 
 BSTNode* BST::insertNodeToBST(BSTNode *parent, User* user)
@@ -74,7 +74,7 @@ BSTNode* BST::insertNodeToBST(BSTNode *parent, User* user)
 
 		newNode->user = user;
 
-		root = newNode;
+		parent = newNode;
 
 		return parent;
 	}
@@ -82,12 +82,23 @@ BSTNode* BST::insertNodeToBST(BSTNode *parent, User* user)
 	if (parent->user->userAge >= user->userAge) { // Left
 
 		parent->left = insertNodeToBST(parent->left, user);
-
-		return parent;
 	}
 
-	// Right
-	parent->right = insertNodeToBST(parent->right, user);
+	else {
+
+		// Right
+		parent->right = insertNodeToBST(parent->right, user);
+	}
 
 	return parent;
+}
+
+// Inorder traversel at BST
+void BST::Inorder(BSTNode *root)
+{
+	if (!root) { return; }
+
+	Inorder(root->left);
+	cout << root->user->userAge << endl;
+	Inorder(root->right);
 }

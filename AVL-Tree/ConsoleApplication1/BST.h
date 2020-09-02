@@ -19,6 +19,8 @@ public:
 
 	// Inserts BSTNode to tree
 	BSTNode* insertNodeToBST(BSTNode*, User*);
+
+	void Inorder(BSTNode*);
 };
 
 #endif
