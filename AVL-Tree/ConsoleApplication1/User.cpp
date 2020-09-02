@@ -2,7 +2,7 @@
 
 User * User::createUser(string name, int age, int weight)
 {
-	User *newUser = (User*)malloc(sizeof(User));
+	User *newUser = new User;
 
 	// Assing info to user object
 	newUser->userAge = age;

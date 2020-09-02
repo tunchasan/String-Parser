@@ -11,9 +11,23 @@ using namespace std;
 
 struct BSTNode
 {
-	User* user = nullptr;
 
-	Stack* stack = nullptr;
+	friend struct BST;
+
+private:
+
+	User* user = NULL;
+
+	Stack* stack = NULL;
+
+	BSTNode* left = NULL;
+
+	BSTNode* right = NULL;
+
+public:
+
+	// Create BSTNode
+	BSTNode* createNode(User*, Stack*);
 };
 
 #endif

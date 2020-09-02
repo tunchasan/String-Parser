@@ -9,6 +9,8 @@ using namespace std;
 
 struct User {
 
+	friend struct BST;
+
 	private:
 
 		// Fields

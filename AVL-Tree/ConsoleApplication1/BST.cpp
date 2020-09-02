@@ -53,13 +53,41 @@ void BST::processUserData(string data)
 
 	// cout << userName << " " << userAge << " " << userWeight << endl;
 
-	// TODO
-
 	// Create user object
+	User* newUser = new User;
 
 	// Assings user info to object
-
-	// Convert them as BST Node
+	newUser = newUser->createUser(userName, userAge, userWeight);
 
 	// Insert to BST
+	insertNodeToBST(root, newUser);
+}
+
+BSTNode* BST::insertNodeToBST(BSTNode *parent, User* user)
+{
+	// If BST Tree is empty
+	if (parent == NULL) {
+
+		BSTNode* newNode = new BSTNode;
+
+		newNode->stack = NULL;
+
+		newNode->user = user;
+
+		root = newNode;
+
+		return parent;
+	}
+
+	if (parent->user->userAge >= user->userAge) { // Left
+
+		parent->left = insertNodeToBST(parent->left, user);
+
+		return parent;
+	}
+
+	// Right
+	parent->right = insertNodeToBST(parent->right, user);
+
+	return parent;
 }
