@@ -45,17 +45,11 @@ void BST::processUserData(string data)
 
 					break;
 				}
-				case 2: { // // user' weight
-
-					userWeight = stoi(token);
-
-					token = "";
-
-					counter++;
-
-					break;
-				}
 			}
 		}
 	}
+
+	userWeight = stoi(token);
+
+	cout << userName << " " << userAge << " " << userWeight << endl;
 }
