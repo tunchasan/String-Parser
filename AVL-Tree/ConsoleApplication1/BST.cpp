@@ -51,5 +51,15 @@ void BST::processUserData(string data)
 
 	userWeight = stoi(token);
 
-	cout << userName << " " << userAge << " " << userWeight << endl;
+	// cout << userName << " " << userAge << " " << userWeight << endl;
+
+	// TODO
+
+	// Create user object
+
+	// Assings user info to object
+
+	// Convert them as BST Node
+
+	// Insert to BST
 }
