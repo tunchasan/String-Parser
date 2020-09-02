@@ -11,13 +11,13 @@ using namespace std;
 
 int main()
 {
-	//// Create new instance of FileManager
-	//FileManager fileManager;
+	// Create new instance of FileManager
+	FileManager fileManager;
 
-	//// Send file name to function
-	//fileManager.readAndProcessFile("Kisiler.txt");
+	// Send file name to function
+	fileManager.readAndProcessFile("Kisiler.txt");
 
-	Stack* stack = new Stack;
+	/*Stack* stack = new Stack;
 
 	StackNode* node1 = new StackNode;
 
@@ -38,7 +38,7 @@ int main()
 
 	stack->insertToStack(node4->createStackNode('d'));
 
-	stack->travelStack();
+	stack->travelStack();*/
 
 	system("pause");
 }

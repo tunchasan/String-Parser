@@ -18,5 +18,5 @@
 		bst.processUserData(line);
 	}
 
-	//bst.Inorder(bst.root);
+	bst.Inorder(bst.root);
 }

@@ -99,6 +99,10 @@ void BST::Inorder(BSTNode *root)
 	if (!root) { return; }
 
 	Inorder(root->left);
-	cout << root->user->userAge << endl;
+
+	cout << root->user->userName << "," << 2020 - root->user->userAge << "," << root->user->userWeight;
+
+	cout << " Yigit...:" << endl;
+
 	Inorder(root->right);
 }
