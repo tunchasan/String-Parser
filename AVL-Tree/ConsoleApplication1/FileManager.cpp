@@ -17,4 +17,6 @@
 		// Send data to Binary Tree
 		bst.processUserData(line);
 	}
+
+	//bst.Inorder(bst.root);
 }

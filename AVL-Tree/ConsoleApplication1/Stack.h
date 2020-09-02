@@ -1,9 +1,18 @@
 #ifndef STACK_H
 #define STACK_H
 
+#include "StackNode.h"
+
 struct Stack
 {
-	// TODO
+private:
+	StackNode* root = NULL;
+
+public:
+
+	void insertToStack(StackNode*);
+
+	void travelStack();
 };
 
 #endif 
